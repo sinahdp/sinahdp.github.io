@@ -1,0 +1,41 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start ;
+}
+.project-menu {
+    position: relative;    
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin: auto;
+}
+.project-menu ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+.project-menu ul li {
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+#project-cards {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: var(--background);
+    height: calc(100% - 3.5rem);
+    overflow-y: auto;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+

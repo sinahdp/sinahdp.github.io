@@ -1,0 +1,75 @@
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    height: min-content;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    background-color: var(--box);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: 0.5s;
+    border: 2px solid var(--box);
+}
+.project-card:last-child {
+    margin-bottom: 5rem;
+}
+.project-card.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+.project-card-img {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    border-radius: 1rem;
+    border: 2px dashed var(--primary);
+}
+.project-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: 0.5s;
+    background-color: var(--box);
+}
+.project-card-title {
+    color: var(--white);
+    font-weight: bold;
+}
+.project-description {
+    width: 100%;
+    height: 2rem;
+    font-size: 0.75rem;    
+}
+.project-card a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+.download-btn {
+    display: block;
+    color: var(--primary);
+    text-align: center;
+}
+#project-menu-indicator {
+    position:absolute ;
+    left: 0;
+    bottom: -0.2rem;
+    width: 4rem;
+    height: 0.4rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+    background-color: var(--primary);
+    transition: left 0.3s ;
+}

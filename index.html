@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sina Heidari</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/about-me.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/6e27c98481.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="user-menu">
+                <img src="image/my_profile.jpg" alt="User Menu">
+                <h2>Sina Heidari</h2>
+            </div>
+            <div class="buttons-topbar">
+                <div id="change-color" class="container-icon">
+                    <span><i class="fa-solid fa-paint-roller"></i></span>
+                </div>
+                <input type="checkbox" id="toggle-right-sidebar" class="toggle-right-sidebar-checkbox">
+                <label for="toggle-right-sidebar" class="container-icon" onclick="showSection('contact')">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </label>
+                <input type="checkbox" id="toggle-menu" class="toggle-menu-checkbox">
+                <label for="toggle-menu" id="toggle-menu-label" class="container-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+        </header>
+        <aside class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <div id="img-profile-div"><img src="image/my_profile.jpg" alt="Sina Heidari"></div>
+                <h3>Sina Heidari</h3>
+                <div class="Profile-detailes">
+                    <span id="Profile-detailes-text"></span>
+                </div>
+                <div class="social-networks">
+                    <div class="circle-wrapper">
+                        <div class="circle"></div>
+                        <a href="https://github.com/sinahdp"><span><i class="fa-brands fa-github"></i></span><span><i class="fa-brands fa-github"></i></span></a>
+                    </div>
+                    <div class="circle-wrapper">
+                        <div class="circle"></div>
+                        <a href="https://t.me/sinahdp"><span><i class="fa-brands fa-telegram"></i></span><span><i class="fa-brands fa-telegram"></i></span></a>
+                    </div>
+                    <div class="circle-wrapper">
+                        <div class="circle"></div>
+                        <a href="https://instagram.com/sina.heidaripour"><span><i class="fa-brands fa-instagram"></i></span><span><i class="fa-brands fa-instagram"></i></span></a>
+                    </div>
+                    <div class="circle-wrapper">
+                        <div class="circle"></div>
+                        <a href="#"><span><i class="fa-brands fa-linkedin"></i></span><span><i class="fa-brands fa-linkedin"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-sidebar-left">
+                <div class="main-menu">
+                    <ul>
+                        <li class="nav-item" onclick="showSection('about')"><i class="fa-solid fa-user"></i>About Me</li>
+                        <li class="nav-item" onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i>Projects</li>
+                        <li class="nav-item" onclick="showSection('contact')"><i class="fa-solid fa-comment-dots"></i>Contact Me</li>
+                        <div id="nav-content-indicator"></div>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div id="home" class="section active">Welcome to Home Section</div>
+            <div id="about" class="section">
+                <div class="about-profile">
+                    <div class="circle-wrapper">
+                        <div class="success circle"></div>
+                        <div class="container-img">
+                            <img src="image/my_profile.jpg" alt="Your Photo">
+                        </div>
+                    </div>
+                    
+                    <div class="about-description">
+                        <h1>Hello! I'm Sina Heidari</h1>
+                        <p>I'm an Electrical Engineering student with a passion for technology, programming, electronics, and space. Eager to learn and make an impact in these fields.</p>
+                    </div>
+                </div>
+                <div class="personal-info">
+                    <h2>Personal Infos</h2>
+                    <div class="container">
+                        <div class="basic-information">
+                            <h3>Basic Information</h3>
+                            <ul>
+                                <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>First Name :</span><span>Sina</span></li>
+                                <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>Last Name :</span><span>Heidari</span></li>
+                                <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>Age :</span><span>21 Years</span></li>
+                                <li><span class="container-icon"><i class="fa-solid fa-flag"></i></span><span>Nationality :</span><span>Iranian</span></li>
+                            </ul>
+                        </div>
+                        <div class="contact-information">
+                            <h3>Contact Information</h3>
+                            <ul>
+                                <li><span class="container-icon"><i class="fa-solid fa-earth-americas"></i></span><span>Country :</span><span>Iran</span></li>
+                                <li><span class="container-icon"><i class="fa-solid fa-city"></i></span><span>City :</span><span>Mashhad</span></li>
+                                <li><span class="container-icon"><i class="fa-brands fa-instagram"></i></span><span>Instagram :</span><span>@sina.heidaripour</span></li>
+                                <li><span class="container-icon"><i class="fa-brands fa-telegram"></i></span><span>Telegram :</span><span>@sinahdp</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <h2>Skiils</h2>
+                    <div id="Programming-skills">
+                        <h3>Programming skills</h3>
+                        <div class="container">
+                            <div class="skill">
+                                <p>Python</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%;"></div>
+                                </div>
+                                <div class="percentage">95%</div>
+                            </div>
+                            <div class="skill">
+                                <p>C/C++</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%;"></div>
+                                </div>
+                                <div class="percentage">90%</div>
+                            </div>
+                            <div class="skill">
+                                <p>Matlab</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%;"></div>
+                                </div>
+                                <div class="percentage">80%</div>
+                            </div>
+                            <div class="skill">
+                                <p>JS</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                                <div class="percentage">75%</div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div id="software-skills">
+                        <h3>Software skills</h3>
+                        <div class="container">
+                            <div class="skill">
+                                <p>Proteus</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%;"></div>
+                                </div>
+                                <div class="percentage">60%</div>
+                            </div>
+                            <div class="skill">
+                                <p>Altium Designer</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%;"></div>
+                                </div>
+                                <div class="percentage">70%</div>
+                            </div>
+                            <div class="skill">
+                                <p>Pspice</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%;"></div>
+                                </div>
+                                <div class="percentage">60%</div>
+                            </div>
+                            <div class="skill">
+                                <p>STM32CubeMX</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%;"></div>
+                                </div>
+                                <div class="percentage">70%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="section">
+                <div class="project-menu">
+                    <ul>
+                        <li class="nav-item " onclick="showProjectCategory('all')">All</li>
+                        <li class="nav-item" onclick="showProjectCategory('matlab')">Matlab</li>
+                        <li class="nav-item" onclick="showProjectCategory('python')">Python</li>
+                        <li class="nav-item active" onclick="showProjectCategory('cpp')">Cpp</li>
+                    </ul>
+                    <div id="project-menu-indicator"></div>
+                </div>
+                <div id="project-cards">
+                    <div class="project-card all matlab">
+                        <div class="project-card-img"><img src="image/Matlab_Logo.png"></div>
+                        <div class="project-card-title">Matlab Project 1</div>
+                        <div class="project-description">MATLAB code for numerical computation formulas</div>
+                        <a href="path/to/download1" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                    <div class="project-card all matlab">
+                        <div class="project-card-img"><img src="image/Matlab_Logo.png"></div>
+                        <div class="project-card-title">Matlab Project 2</div>
+                        <div class="project-description">Advanced MATLAB simulations</div>
+                        <a href="path/to/download2" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                    <div class="project-card all python">
+                        <div class="project-card-img"><img src="image/Python-logo.svg.png"></div>
+                        <div class="project-card-title">Python Project 1</div>
+                        <div class="project-description">Python script for data analysis</div>
+                        <a href="path/to/download3" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                    <div class="project-card all python">
+                        <div class="project-card-img"><img src="image/Python-logo.svg.png"></div>
+                        <div class="project-card-title">Python Project 2</div>
+                        <div class="project-description">Web scraping with Python</div>
+                        <a href="path/to/download4" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                    <div class="project-card all cpp">
+                        <div class="project-card-img"><img src="image/Cpp_Logo.svg.png"></div>
+                        <div class="project-card-title">C++ Project 1</div>
+                        <div class="project-description">C++ application for file management</div>
+                        <a href="path/to/download5" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                    <div class="project-card all cpp">
+                        <div class="project-card-img"><img src="image/Cpp_Logo.svg.png"></div>
+                        <div class="project-card-title">C++ Project 2</div>
+                        <div class="project-description">Data structures implementation in C++</div>
+                        <a href="path/to/download6" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
+                    </div>
+                </div>                
+            </div>
+
+            <div id="contact" class="section">
+                <h3>Contect Me</h3>
+                <div class="container">
+                    <div class="social-networks">
+                        <div class="circle-wrapper">
+                            <div class="circle"></div>
+                            <a href="https://github.com/sinahdp"><span><i class="fa-brands fa-github"></i></span><span><i class="fa-brands fa-github"></i></span></a>
+                        </div>
+                        <div class="circle-wrapper">
+                            <div class="circle"></div>
+                            <a href="https://t.me/sinahdp"><span><i class="fa-brands fa-telegram"></i></span><span><i class="fa-brands fa-telegram"></i></span></a>
+                        </div>
+                        <div class="circle-wrapper">
+                            <div class="circle"></div>
+                            <a href="https://instagram.com/sina.heidaripour"><span><i class="fa-brands fa-instagram"></i></span><span><i class="fa-brands fa-instagram"></i></span></a>
+                        </div>
+                        <div class="circle-wrapper">
+                            <div class="circle"></div>
+                            <a href="#"><span><i class="fa-brands fa-linkedin"></i></span><span><i class="fa-brands fa-linkedin"></i></span></a>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <h3>Contect Me</h3>
+                        <form action="https://formspree.io/f/xovavryj" method="POST">
+                            <div class="form-item">
+                                <span class="container-icon"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" id="name" name="name" required placeholder="Enter Name">
+                            </div>
+                            <div class="form-item">
+                                <span class="container-icon"><i class="fa-solid fa-envelope"></i></span>
+                                <input type="email" id="email" name="email" required placeholder="Enter Email">
+                            </div>
+                            <input type="text" id="title-message" name="title" required placeholder="Title">
+                            <textarea id="message" name="message" rows="4" required placeholder="Write your text"></textarea>
+                            <button type="submit">Send</button>
+                        </form>                                          
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <aside class="sidebar right-sidebar">
+            <div class="contact-box">
+                <h3>Contect Me</h3>
+                <form action="https://formspree.io/f/xovavryj" method="POST">
+                    <div class="form-item">
+                        <span class="container-icon"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" id="name" name="name" required placeholder="Enter Name">
+                    </div>
+                    <div class="form-item">
+                        <span class="container-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" id="email" name="email" required placeholder="Enter Email">
+                    </div>
+                    <input type="text" id="title-message" name="title" required placeholder="Title">
+                    <textarea id="message" name="message" rows="4" required placeholder="Write your text"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+    <script src="js/myjs.js"></script>
+</body>
+</html>

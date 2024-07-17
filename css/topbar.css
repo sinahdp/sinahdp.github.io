@@ -1,0 +1,43 @@
+header {
+    background-color: var(--box);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0.75rem;
+    left: 18.5rem;
+    padding: 0.5rem;
+    width: calc(100% - 19.25rem);
+    height:3rem;
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    transition: 0.3s;
+}
+header.expanded {
+    left: 0.75rem;
+    width:calc(100% - 1.5rem);
+}
+header .user-menu {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+header .user-menu img {
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+.buttons-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+#toggle-menu-label {
+    border: 2px solid var(--primary);
+}
+#toggle-menu, #toggle-right-sidebar {
+    display: none;
+}

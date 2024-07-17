@@ -1,0 +1,291 @@
+.sidebar {
+    width: 17rem;
+    height: calc(100% - 5.25rem);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: fixed;
+    top: 4.5rem;
+    bottom: 0;
+    overflow-y: auto;
+    border-radius: 1rem;
+}
+.left-sidebar {
+    left: 0.75rem;
+    top: 0.75rem;
+    height:calc(100% - 1.5rem);
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    background-color: rgba(48, 56, 66, 0.3);
+    z-index:1000;
+}
+.left-sidebar.collapsed {
+    left: -17.75rem;
+}
+.right-sidebar {
+    right: 0.75rem;
+}
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    background-color: var(--box);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 2px dashed var(--primary);
+}
+#img-profile-div {
+    position: relative;
+    left: calc(50%-50px);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;border-radius: 50%;
+    background-color: var(--box);
+    box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    padding: 0.25rem;
+}
+#img-profile-div:before {
+    content: "";
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    left:-25%;
+    top:-25%;
+    background-image: conic-gradient(var(--primary) 20deg ,transparent 120deg);
+    animation: rotate 2s infinite linear ;
+}
+#img-profile-div:after {
+    content: "";
+    width: 94px;
+    height: 94px;
+    position: absolute;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: var(--box);
+    color: var(--dark-blue);
+}
+#img-profile-div img {
+    position: relative;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    z-index: 2;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+.Profile-detailes {
+    font-size: 1rem;
+    color: var(--white);
+    padding: 0.25rem;
+    border-right: 2px solid var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+}
+#Profile-detailes-text {
+    display: inline-block;
+}
+.social-networks {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.social-networks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.social-networks a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: transform 0.2s ease-out;
+    border-radius: 50%;
+    color: var(--white);
+}
+.social-networks a span:last-child {
+    position: absolute;
+    transform: translateX(100%);
+    color: var(--primary);
+}
+.social-networks a i {
+    font-size: 1.5rem;
+}
+.social-networks a:hover span:first-child {
+    transform: translateX(-100%);
+}
+.social-networks a:hover span:last-child {
+    transform: translateX(0);
+}
+.social-networks .circle-wrapper {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-networks .circle-wrapper .circle {
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0.125rem dashed var(--primary);
+    background-clip: content-box;
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+.contact-box {
+    width: 100%;
+    background-color: var(--box);
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    border: 2px dashed var(--primary);
+}
+.contact-box h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0.5rem;
+}
+.contact-box form .form-item {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+.contact-box form input {
+    width: 100%;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--white);
+    font-size: 0.9rem;
+    border: 2px solid var(--background);
+}
+.contact-box form input:focus {
+    border: 2px solid var(--primary);
+}
+.contact-box form textarea {
+    width: 100%;
+    background-color: var(--background);
+    border-radius: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    flex-grow: 1;
+    color: var(--white);
+    font-family: Poppins,OpenSans,sans-serif;
+    font-size: 0.9rem;
+    resize: none;
+    overflow: scroll;
+    border: 2px solid transparent;
+}
+.contact-box form textarea:focus {
+    border: 2px solid var(--primary);
+}
+.contact-box form button {
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--box);
+    border: 2px solid var(--box);
+}
+.contact-box form button:hover {
+    background-color: var(--background);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+nav ul li.active {
+    color: var(--white);
+}
+nav ul li.active i {
+    color: var(--primary);
+}
+.nav-sidebar-left {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--box);
+    border-radius: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    z-index: -2;
+}
+.main-menu {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    flex-grow: 1;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    color: var(--text);
+    transition:.3s;
+    z-index: 1;
+    border-radius: 0.25rem;
+}
+.nav-item:hover , .nav-item.active {
+    color: var(--white);
+}
+.nav-item:hover i{
+    color: var(--primary);
+}
+.nav-item i {
+    margin-right: 0.75rem;
+    transition: 0.2s;
+}
+#nav-content-indicator {
+    position:absolute ;
+    left:-0.25rem;
+    top: -2.5rem;
+    width:0.5rem;
+    height:1.5rem;
+    border-radius: 0 .25rem .25rem 0;
+    background-color: var(--primary);
+    transition: 0.3s ;
+}
+#nav-content-indicator::after {
+    content: "";
+    position:absolute ;
+    top: -0.25rem;
+    left : 1.25rem;
+    width: 15rem;
+    height: 2rem;
+    background-color: var(--primary);
+    opacity: 30%;
+    border-radius: .5rem;
+    z-index: -1;
+}

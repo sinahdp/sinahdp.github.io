@@ -1,0 +1,13 @@
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: scale(0.95);
+    height: 100%;
+}
+
+.section.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
