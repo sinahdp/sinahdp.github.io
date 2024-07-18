@@ -1,4 +1,5 @@
 .main-content {
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -6,15 +7,14 @@
     height: calc(100% - 5.25rem);
     padding: 1rem;
     background-color: var(--box);
-    margin-top: 4.5rem ;
-    margin-left: calc(18.5rem);
-    margin-right: calc(18.5rem);
+    top: 4.5rem ;
+    left: calc(18.5rem);
+    right: calc(18.5rem);
     overflow-y: auto;
     border-radius: 1rem;
     transition: 0.3s;
-    
 }
 .main-content.expanded {
-    margin-left: 0.75rem;
+    left: 0.75rem;
 }
 

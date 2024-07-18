@@ -152,7 +152,7 @@
     border-radius: 50%;
     border: 0.125rem dashed var(--primary);
     background-clip: content-box;
-    animation: spin 30s linear infinite;
+    animation: spin 20s linear infinite;
 }
 
 @keyframes spin { 
@@ -183,6 +183,7 @@
     display: flex;
     width: 100%;
     gap: 0.5rem;
+    align-items: center;
 }
 .contact-box form input {
     width: 100%;

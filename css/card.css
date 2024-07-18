@@ -14,9 +14,6 @@
     transition: 0.5s;
     border: 2px solid var(--box);
 }
-.project-card:last-child {
-    margin-bottom: 5rem;
-}
 .project-card.active {
     display: flex;
     opacity: 1;

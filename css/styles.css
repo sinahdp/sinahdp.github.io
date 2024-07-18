@@ -38,7 +38,7 @@
     border: none;
     scroll-behavior: smooth;
     font-size: 1rem;
-    
+    box-sizing: border-box;
 }
 html {
     font-size: 16px;
@@ -88,37 +88,51 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 996px) {
-    .left-sidebar {
-        right: -17.75rem;
-    }
-    .main-content {
-        margin-left: 0.75rem;
-    }
-    header {
-        width: calc(100% - 1.5rem);
-        left: 0.75rem;
-    }
-}
-@media (max-width: 996px) {
-    #Programming-skills, #software-skills {
-        width: 100%;
-    }
-}
 @media (max-width: 1350px) {
     .right-sidebar {
         right: -17.75rem;
     }
     .main-content {
-        margin-right: 0.75rem;
+        right: 0.75rem;
     }
 }
+
 @media (max-width: 1200px) {
     #contact {
         flex-wrap: wrap;
     }
-    
 }
+
+@media (max-width: 992px) {
+    .left-sidebar {
+        right: -17.75rem;
+    }
+    .main-content {
+        left: 0.75rem;
+    }
+    header {
+        width: calc(100% - 1.5rem);
+        left: 0.75rem;
+    }
+    #Programming-skills, #software-skills {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle-wrapper {
+        position: relative;
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    .about-profile h1 {
+        font-size: 1.2rem;
+    }
+    .about-profile p {
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 576px) {
     #about {
         padding: 0;
@@ -135,23 +149,6 @@ body {
         flex-direction: row;
         border: 2px dashed var(--primary);
     }
-    
-}
-@media (max-width: 768px) {
-    .circle-wrapper {
-        position: relative;
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-    .about-profile h1 {
-        font-size: 1.2rem;
-    }
-    .about-profile p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 0) and (max-width: 576px) {
     .project-card {
         width: 100%;
     }
@@ -168,20 +165,21 @@ body {
         display: block;
     }
 }
+
 @media (min-width: 576px) and (max-width: 768px) {
     .project-card {
         width: calc((100% - 1rem)/2);
     }
 }
+
 @media (min-width: 768px) and (max-width: 1550px) {
     .project-card {
         width: calc((100% - 2rem)/3);
     }
 }
+
 @media (min-width: 1550px) {
     .project-card {
         width: calc((100% - 3rem)/4);
     }
 }
-
-

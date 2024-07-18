@@ -1,5 +1,5 @@
 const textElement = document.getElementById('Profile-detailes-text');
-const texts = ["Electrical Engineering student", "Programmer", "Space Lover"];
+const texts = ["Electrical Engineering Student", "Programmer"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -49,9 +49,14 @@ function handleMenuToggle() {
     const mainContent = document.querySelector('.main-content');
     const topBar = document.querySelector('header');
 
+    if (!toggleMenu || !sidebarLeft || !mainContent || !topBar) {
+        console.error('One or more elements not found');
+        return;
+    }
+
     let isMobileView = window.matchMedia("(max-width: 992px)").matches;
 
-    toggleMenu.addEventListener('click', function() {
+    toggleMenu.addEventListener('click', function(event) {
         sidebarLeft.classList.toggle('collapsed');
         if (!isMobileView) {
             mainContent.classList.toggle('expanded');
@@ -60,29 +65,32 @@ function handleMenuToggle() {
     });
 
     const mediaQuery = window.matchMedia("(max-width: 992px)");
+
     function handleScreenChange(e) {
-        if (e.matches) {
-            isMobileView = true;
+        isMobileView = e.matches;
+        if (isMobileView) {
             sidebarLeft.classList.add('collapsed');
             mainContent.classList.add('expanded');
             topBar.classList.add('expanded');
         } else {
-            isMobileView = false;
             sidebarLeft.classList.remove('collapsed');
             mainContent.classList.remove('expanded');
             topBar.classList.remove('expanded');
         }
     }
+
     mediaQuery.addEventListener('change', handleScreenChange);
     handleScreenChange(mediaQuery);
 
-    const mobileMediaQuery = window.matchMedia("(max-width: 992px)");
-    document.addEventListener('click', function(event) {
-        if (mobileMediaQuery.matches && !sidebarLeft.contains(event.target) && !toggleMenu.contains(event.target)) {
+    function handleOutsideClick(event) {
+        if (isMobileView && !sidebarLeft.contains(event.target) && !toggleMenu.contains(event.target)) {
             sidebarLeft.classList.add('collapsed');
         }
-    });
+    }
+
+    document.addEventListener('click', handleOutsideClick);
 }
+
 
 function showSection(sectionId) {
     var sections = document.querySelectorAll('.section');
