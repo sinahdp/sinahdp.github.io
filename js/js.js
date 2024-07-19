@@ -150,6 +150,26 @@ function showProjectCategory(category) {
     }
 }
 
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    var modalContent = modal.querySelector('.modal-content');
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modalContent.classList.add('show');
+        modalContent.classList.remove('hide');
+    }, 10);
+}
+
+function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
+    var modalContent = modal.querySelector('.modal-content');
+    modalContent.classList.add('hide');
+    setTimeout(() => {
+        modalContent.classList.remove('show');
+        modal.style.display = 'none';
+    }, 300);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     type();
     toggleColor();
@@ -157,3 +177,4 @@ document.addEventListener("DOMContentLoaded", () => {
     showProjectCategory('all');
     showSection('about');
 });
+

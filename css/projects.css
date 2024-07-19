@@ -25,6 +25,16 @@
     padding-bottom: 1rem;
     cursor: pointer;
 }
+#project-menu-indicator {
+    position:absolute ;
+    left: 0;
+    bottom: -0.2rem;
+    width: 4rem;
+    height: 0.4rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+    background-color: var(--primary);
+    transition: left 0.3s ;
+}
 #project-cards {
     display: flex;
     justify-content: start;
