@@ -48,8 +48,9 @@ function handleMenuToggle() {
     const sidebarLeft = document.querySelector('.sidebar.left-sidebar');
     const mainContent = document.querySelector('.main-content');
     const topBar = document.querySelector('header');
+    const upperBar = document.querySelector('.upper-bar');
 
-    if (!toggleMenu || !sidebarLeft || !mainContent || !topBar) {
+    if (!toggleMenu || !sidebarLeft || !mainContent || !topBar || !upperBar) {
         console.error('One or more elements not found');
         return;
     }
@@ -61,6 +62,7 @@ function handleMenuToggle() {
         if (!isMobileView) {
             mainContent.classList.toggle('expanded');
             topBar.classList.toggle('expanded');
+            upperBar.classList.toggle('expanded');
         }
     });
 
@@ -72,10 +74,12 @@ function handleMenuToggle() {
             sidebarLeft.classList.add('collapsed');
             mainContent.classList.add('expanded');
             topBar.classList.add('expanded');
+            upperBar.classList.add('expanded');
         } else {
             sidebarLeft.classList.remove('collapsed');
             mainContent.classList.remove('expanded');
             topBar.classList.remove('expanded');
+            upperBar.classList.remove('expanded');
         }
     }
 

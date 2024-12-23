@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/upper-bar.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/about-me.css">
@@ -16,9 +17,12 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/6e27c98481.js" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -50,42 +54,51 @@
                 </div>
                 <div class="social-networks">
                     <div class="circle-wrapper">
-                        <div class="circle"></div>
                         <a href="https://github.com/sinahdp"><span><i class="fa-brands fa-github"></i></span><span><i class="fa-brands fa-github"></i></span></a>
                     </div>
                     <div class="circle-wrapper">
-                        <div class="circle"></div>
                         <a href="https://t.me/sinahdp"><span><i class="fa-brands fa-telegram"></i></span><span><i class="fa-brands fa-telegram"></i></span></a>
                     </div>
                     <div class="circle-wrapper">
-                        <div class="circle"></div>
                         <a href="https://instagram.com/sina.heidaripour"><span><i class="fa-brands fa-instagram"></i></span><span><i class="fa-brands fa-instagram"></i></span></a>
                     </div>
                     <div class="circle-wrapper">
-                        <div class="circle"></div>
                         <a href="#"><span><i class="fa-brands fa-linkedin"></i></span><span><i class="fa-brands fa-linkedin"></i></span></a>
                     </div>
                 </div>
             </div>
+            <div class="middle-menu-bar">
+                <div class="d1">Menu</div>
+                <div class="d2"></div>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+            </div>
             <nav class="nav-sidebar-left">
                 <div class="main-menu">
                     <ul>
-                        <li class="nav-item" onclick="showSection('about')"><i class="fa-solid fa-user"></i>About Me</li>
-                        <li class="nav-item" onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i>Projects</li>
-                        <li class="nav-item" onclick="showSection('contact')"><i class="fa-solid fa-comment-dots"></i>Contact Me</li>
+                        <li class="nav-item hover-effect" onclick="showSection('about')"><i class="fa-solid fa-user"></i>About Me</li>
+                        <li class="nav-item hover-effect" onclick="showSection('projects')"><i class="fa-solid fa-briefcase"></i>Projects</li>
+                        <li class="nav-item hover-effect" onclick="showSection('contact')"><i class="fa-solid fa-comment-dots"></i>Contact Me</li>
                         <div id="nav-content-indicator"></div>
                     </ul>
                 </div>
             </nav>
         </aside>
+        <div class="upper-bar">
+            <div class="title-box"></div>
+            <div class="music-box"></div>
+            <div class="clock-box"></div>
+            <span class="span-1"></span>
+            <span class="span-2"></span>
+            <span class="span-3"></span>
+            <span class="span-4"></span>
+        </div>
         <main class="main-content">
+            
             <div id="about" class="section">
                 <div class="about-profile">
-                    <div class="circle-wrapper">
-                        <div class="success circle"></div>
-                        <div class="container-img">
-                            <img src="image/my_profile.jpg" alt="Your Photo">
-                        </div>
+                    <div class="container-img-profile">
+                        <img src="image/my_profile.jpg" alt="Your Photo">
                     </div>
                     
                     <div class="about-description">
@@ -116,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="skills">
                     <h2>Skiils</h2>
                     <div id="Programming-skills">
@@ -187,8 +200,9 @@
                     </div>
                 </div>
             </div>
-
+    
             <div id="projects" class="section">
+
                 <div class="project-menu">
                     <ul>
                         <li class="nav-item " onclick="showProjectCategory('all')">All</li>
@@ -199,33 +213,8 @@
                     <div id="project-menu-indicator"></div>
                 </div>
                 <div id="project-cards">
-
+    
                     <!-- MATLAB Project -->
-
-                    <div class="project-card all matlab">
-                        <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
-                        <div class="project-card-title">MATLAB Code for Numerical Computation Formulas</div>
-                        <div class="project-card-btns">
-                            <a href="path/to/download1" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
-                            <a class="container-icon" onclick="openModal('modal-matlab')"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div id="modal-matlab" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-content-header">
-                                <h2>Matlab Project 1</h2>
-                                <span class="container-icon close-modal" onclick="closeModal('modal-matlab')"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                            <h2>MATLAB Code for Numerical Computation Formulas</h2>
-                            <p>This project includes formulas for numerical computation. The content is divided into the following chapters:</p>
-                            <ul>
-                                <li>Chapter 1: Introduction to Numerical Computation</li>
-                                <li>Chapter 2: Numerical Methods for Solving Equations</li>
-                                <!-- Add more chapters as needed -->
-                            </ul>
-                        </div>
-                    </div>
-
                     <!-- Python Project 1 -->
                     <div class="project-card all python">
                         <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
@@ -255,79 +244,16 @@
                     </div>
             
                     <!-- Python Project 2 -->
-
-                    <div class="project-card all python">
-                        <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
-                        <div class="project-card-title">Python Advanced Course Exercises by Jadi</div>
-                        <div class="project-card-btns">
-                            <a href="projects/advanced-python.zip" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
-                            <a class="container-icon" onclick="openModal('modal-python-3')"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div id="modal-python-3" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-content-header">
-                                <h2>Python Project</h2>
-                                <span class="container-icon close-modal" onclick="closeModal('modal-python-3')"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                            <h2>Python Advanced Course Exercises by Jadi on Maktabkhooneh</h2>
-                            <p>This file contains the solutions to the exercises from 4 chapters of the Advanced Python course by Jadi MirMirani on Maktabkhooneh.</p>
-                            <ul>
-                                <li>Chapter 1 : Object-Oriented Programming</li>
-                                <li>Chapter 2 : Database in Python</li>
-                                <li>Chapter 3 : Web Scraping</li>
-                                <li>Chapter 4 : Final Project (Data extraction from websites and building a price prediction system using machine learning)</li>
-                            </ul>
-                        </div>
-                    </div>
-
                     <!-- Python Project 3 -->
-
-                    <div class="project-card all python">
-                        <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
-                        <div class="project-card-title">Anonymous Group Chat Telegram Bot</div>
-                        <div class="project-card-btns">
-                            <a href="projects/group-chat-telegram-bot.zip" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
-                            <a class="container-icon" onclick="openModal('modal-python-1')"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div id="modal-python-1" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-content-header">
-                                <h2>Python Project</h2>
-                                <span class="container-icon close-modal" onclick="closeModal('modal-python-1')"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                            <h2>Anonymous Group Chat Telegram Bot with Nickname Selection</h2>
-                            <p>This code is written in Python using the python-telegram-bot library. To use the bot, first create a Telegram bot using BotFather and place your bot token in the string named <code>token</code>, then run the code. After these steps, any user who joins the bot can select a nickname and join the chat.</p>
-                        </div>
-                    </div>
-
                     <!-- Python Project 4 -->
-
-                    <div class="project-card all python">
-                        <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
-                        <div class="project-card-title">Web Data Extraction and Price Prediction System</div>
-                        <div class="project-card-btns">
-                            <a href="projects/web-data-extraction.zip" class="download-btn"><span class="container-icon"><i class="fa-solid fa-download"></i></span>Download</a>
-                            <a class="container-icon" onclick="openModal('modal-python-4')"><i class="fa-solid fa-eye"></i></a>
-                        </div>
-                    </div>
-                    <div id="modal-python-4" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-content-header">
-                                <h2>Python Project</h2>
-                                <span class="container-icon close-modal" onclick="closeModal('modal-python-4')"><i class="fa-solid fa-xmark"></i></span>
-                            </div>
-                            <h2>Web Data Extraction and Price Prediction System</h2>
-                            <p>In this project, we use the BeautifulSoup library to extract information such as car model, price, mileage, and year of manufacture from a website and store it in a database. Then, using machine learning libraries, we create a price prediction system based on this data.</p>
-                        </div>
-                    </div>
+    
+                    
                     
                 </div>                
             </div>
-
+    
             <div id="contact" class="section">
-                <h3>Contect Me</h3>
+                <h3>Contact Me</h3>
                 <div class="container">
                     <div class="social-networks">
                         <div class="circle-wrapper">
@@ -348,7 +274,7 @@
                         </div>
                     </div>
                     <div class="contact-box">
-                        <h3>Contect Me</h3>
+                        <h2>Contact Me</h2>
                         <form action="https://formspree.io/f/mgvwbykg" method="POST">
                             <div class="form-item">
                                 <span class="container-icon"><i class="fa-solid fa-user"></i></span>
@@ -369,20 +295,6 @@
         
         <aside class="sidebar right-sidebar">
             <div class="contact-box">
-                <h3>Contect Me</h3>
-                <form action="https://formspree.io/f/mgvwbykg" method="POST">
-                    <div class="form-item">
-                        <span class="container-icon"><i class="fa-solid fa-user"></i></span>
-                        <input type="text" id="name" name="name" required placeholder="Enter Name">
-                    </div>
-                    <div class="form-item">
-                        <span class="container-icon"><i class="fa-solid fa-envelope"></i></span>
-                        <input type="email" id="email" name="email" required placeholder="Enter Email">
-                    </div>
-                    <input type="text" id="title-message" name="title" required placeholder="Title">
-                    <textarea id="message" name="message" rows="4" required placeholder="Write your text"></textarea>
-                    <button type="submit">Send</button>
-                </form>
             </div>
         </aside>
     </div>

@@ -8,47 +8,61 @@
 }
 .about-profile {
     width: 100%;
+    height: auto;
+    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-}
-.circle-wrapper {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-}
-.container-img {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-}
-.circle {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-clip: content-box;
-    animation: spin 20s linear infinite;
-}
-.success {
-  border: 0.2rem dashed var(--primary);
-}
-@keyframes spin { 
-  100% { 
-    transform: rotate(360deg);
-  }
+    gap: 2rem;
 }
 
-.about-profile .container-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-img-profile {
+	position: relative;
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
 }
+.container-img-profile:hover {
+    transform: scale(1.1);
+}
+.container-img-profile:active {
+	transform: scale(0.9);
+	transition: all 0.05s ease;
+}
+
+.container-img-profile::before {
+    content: "";
+	position: absolute;
+	width: calc(100% + 0.75rem);
+	height: calc(100% + 0.75rem);
+	border: 0.1rem solid var(--primary);
+	border-radius: 50%;
+	transition: all 0.3s ease;
+}
+
+.container-img-profile::after {
+    content: "";
+	position: absolute;
+	width: calc(100% + 1.5rem);
+	height: calc(100% + 1.5rem);
+	border: 0.2rem dashed var(--primary);
+	border-radius: 50%;
+	animation: rotate 30s linear infinite;
+	transition: all 0.3s ease;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
 .about-profile img {
     width: 100%;
     height: 100%;
@@ -60,7 +74,7 @@
     justify-content: start;
     align-items: center;
     max-width: 70%;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 .about-description h1 {
     color: var(--white);

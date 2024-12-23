@@ -1,0 +1,116 @@
+.upper-bar {
+    position: fixed;
+    top: 3.5rem;
+    left: 18rem;
+    right: 18rem;
+    display: flex;
+    flex: 1;
+    height: 3.5rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+.upper-bar.expanded {
+    left: 0.5rem;
+}
+.upper-bar div {
+    position: relative;
+    width: calc(33.33% - 2.15rem);
+    height: 3rem;
+    background-color: var(--box);
+    display: flex;
+    z-index: 2;
+    transition: 0.3s;
+}
+.title-box {
+    top: 0.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+.clock-box {
+    top: 0.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+.upper-bar div::after {
+    content: "";
+    top: 0;
+    width: 100%;
+    height:100%;
+    position: relative;
+    background-color: var(--box);
+    display: flex;
+}
+.music-box::before {
+    content: "";
+    top: 0;
+    right: 1.5rem;
+    width: 100%;
+    height:100%;
+    position: relative;
+    background-color: var(--box);
+    display: flex;
+    border-radius: 0 0 0 0.75rem;
+    transform: skew(30deg);
+}
+.title-box::after{
+    left: 1.5rem;
+    transform: skew(30deg);
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+.music-box::after {
+    left: 1.5rem;
+    transform: skew(-30deg);
+    border-radius: 0 0 0.75rem 0;
+}
+.clock-box::after {
+    right:1.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    transform: skew(-30deg);
+}
+
+.upper-bar span {
+    position: absolute;
+    width:0.7rem;
+    height: 0.7rem;
+    background-color: var(--box);
+    z-index: 1000;
+}
+.upper-bar span:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+}
+.upper-bar .span-1 {
+    top:2.8rem;
+    left: calc(33.33% + 0.02rem);
+    transform: skew(30deg);
+
+}
+.upper-bar .span-1:after {
+    border-radius: 0 0 0 0.7rem;
+}
+.upper-bar .span-2 {
+    top:0;
+    left: calc(33.33% - 1.78rem);
+    transform: skew(30deg);
+}
+.upper-bar .span-2:after {
+    border-radius: 0 0.7rem 0 0;
+}
+.upper-bar .span-3 {
+    top:0;
+    right: calc(33.33% - 1.78rem);
+    transform: skew(-30deg);
+}
+.upper-bar .span-3:after {
+    border-radius: 0.7rem 0 0 0;
+}
+.upper-bar .span-4 {
+    top:2.8rem;
+    right: calc(33.33% + 0.02rem);
+    transform: skew(-30deg);
+}
+.upper-bar .span-4:after {
+    border-radius: 0 0 0.7rem 0;
+}

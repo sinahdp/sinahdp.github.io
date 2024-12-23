@@ -9,6 +9,7 @@
     overflow: hidden;
     margin-bottom: 1rem;
     margin: auto;
+    border: 1px solid red;
 }
 .project-menu ul {
     display: flex;
@@ -41,11 +42,11 @@
     gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
-    background-color: var(--background);
     height: calc(100% - 3.5rem);
     overflow-y: auto;
     border-radius: 1rem;
     padding: 1rem;
+    border: 1px solid var(--primary);
 }
 
 
