@@ -1,12 +1,12 @@
 .main-content {
     position: fixed;
-    top: 7rem ;
+    top: 6rem ;
     left: 18rem;
     right: 18rem;
     display: flex;
     flex-direction: column;
     flex: 1;
-    height: calc(100% - 7.5rem);
+    height: calc(100% - 6.5rem);
     transition: 0.3s;
     padding: 1rem;
     background-color: var(--box);

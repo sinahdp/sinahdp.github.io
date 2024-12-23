@@ -145,14 +145,19 @@ function showProjectCategory(category) {
     }, 300);
 
     navItems.forEach(item => item.classList.remove('active'));
-
     const activeNavItem = Array.from(navItems).find(item => item.innerText.toLowerCase() === category);
+
     if (activeNavItem) {
         activeNavItem.classList.add('active');
-        const index = Array.from(navItems).indexOf(activeNavItem);
-        indicator.style.left = `${index * 4.5}rem`;
+        const activeItemRect = activeNavItem.getBoundingClientRect();
+        const parentRect = activeNavItem.parentElement.getBoundingClientRect();
+        const leftOffset = activeItemRect.left - parentRect.left;
+        const width = activeItemRect.width;
+        indicator.style.left = `${leftOffset}px`;
+        indicator.style.width = `${width}px`;
     }
 }
+
 
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
@@ -182,3 +187,48 @@ document.addEventListener("DOMContentLoaded", () => {
     showSection('about');
 });
 
+gsap.from(".container-img-profile", {
+    duration: 1.5,
+    opacity: 0,
+    ease: "power3.out"
+});
+
+gsap.from(".about-description", {
+    duration: 1.5,
+    opacity: 0,
+    y: 30,
+    ease: "power3.out",
+    delay: 0.5
+});
+
+gsap.from(".personal-info", {
+    duration: 1.5,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out",
+    delay: 1
+});
+
+gsap.from(".personal-info h2", {
+    duration: 1.5,
+    opacity: 0,
+    x: -50,
+    ease: "power3.out",
+    delay: 1
+});
+gsap.from(".skills h2", {
+    duration: 1.5,
+    opacity: 0,
+    x: -50,
+    ease: "power3.out",
+    delay: 2
+});
+
+gsap.from("#Programming-skills, #software-skills", {
+    duration: 1.5,
+    opacity: 0,
+    y: 30,
+    ease: "power3.out",
+    stagger: 0.3,
+    delay: 2.5
+});

@@ -5,7 +5,7 @@
     right: 18rem;
     display: flex;
     flex: 1;
-    height: 3.5rem;
+    height: 2.5rem;
     justify-content: space-between;
     gap: 0.5rem;
     transition: 0.3s;
@@ -16,7 +16,7 @@
 .upper-bar div {
     position: relative;
     width: calc(33.33% - 2.15rem);
-    height: 3rem;
+    height: 2rem;
     background-color: var(--box);
     display: flex;
     z-index: 2;
@@ -69,8 +69,8 @@
 
 .upper-bar span {
     position: absolute;
-    width:0.7rem;
-    height: 0.7rem;
+    width:0.75rem;
+    height: 0.75rem;
     background-color: var(--box);
     z-index: 1000;
 }
@@ -82,35 +82,39 @@
     background-color: var(--background);
 }
 .upper-bar .span-1 {
-    top:2.8rem;
-    left: calc(33.33% + 0.02rem);
+    top:1.8rem;
+    left: calc(33.33% - 0.26rem);
     transform: skew(30deg);
+    border-radius: 0 0.75rem 0 0;
 
 }
 .upper-bar .span-1:after {
-    border-radius: 0 0 0 0.7rem;
+    border-radius: 0 0.75rem 0 0.75rem;
 }
 .upper-bar .span-2 {
     top:0;
-    left: calc(33.33% - 1.78rem);
+    left: calc(33.33% - 1.53rem);
     transform: skew(30deg);
+    border-radius: 0 0 0 0.75rem;
 }
 .upper-bar .span-2:after {
-    border-radius: 0 0.7rem 0 0;
+    border-radius: 0 0.75rem 0 0.75rem;
 }
 .upper-bar .span-3 {
     top:0;
-    right: calc(33.33% - 1.78rem);
+    right: calc(33.33% - 1.53rem);
     transform: skew(-30deg);
+    border-radius: 0 0 0.75rem 0;
 }
 .upper-bar .span-3:after {
-    border-radius: 0.7rem 0 0 0;
+    border-radius: 0.75rem 0 0.75rem 0;
 }
 .upper-bar .span-4 {
-    top:2.8rem;
-    right: calc(33.33% + 0.02rem);
+    top:1.8rem;
+    right: calc(33.33% - 0.26rem);
     transform: skew(-30deg);
+    border-radius: 0.75rem 0 0 0;
 }
 .upper-bar .span-4:after {
-    border-radius: 0 0 0.7rem 0;
+    border-radius: 0.75rem 0 0.75rem 0;
 }
