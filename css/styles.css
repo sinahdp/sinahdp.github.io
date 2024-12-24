@@ -134,8 +134,8 @@ body {
 
 @media (max-width: 576px) {
     .about-profile {
-        padding-top: 1.5rem;
         gap: 1.5em;
+
     }
     #about {
         padding: 0;
@@ -161,7 +161,7 @@ body {
     #contact .social-networks {
         padding: 1rem;
     }
-    .contact-box h3 {
+    .contact-box h2 {
         display: none;
     }
     #contact > h3 {
