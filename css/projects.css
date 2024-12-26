@@ -52,7 +52,7 @@
     height: calc(100% - 3.5rem);
     overflow-y: auto;
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 

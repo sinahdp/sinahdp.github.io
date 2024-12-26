@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sina Heidari</title>
+    <title>Sina Heidari | Electrical Engineer & Programmer</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Sina Heidari - Electrical Engineering student with a passion for technology, programming, and electronics. Explore my projects and contact me!">
+    <meta name="keywords" content="Sina Heidari, Electrical Engineer, Programmer, Python, MATLAB, Electronics, Projects">
+    <meta name="author" content="Sina Heidari">
+
+    <!-- Open Graph / Social Media Optimization -->
+    <meta property="og:title" content="Sina Heidari - Electrical Engineer & Programmer">
+    <meta property="og:description" content="Discover my projects, skills, and contact information.">
+    <meta property="og:image" content="image/my_profile.jpg">
+    <meta property="og:url" content="https://sinahdp.github.io">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sina Heidari - Electrical Engineer & Programmer">
+    <meta name="twitter:description" content="Discover my projects, skills, and contact information.">
+    <meta name="twitter:image" content="image/my_profile.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sinahdp.github.io">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/sidebar.css">
@@ -20,15 +41,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/6e27c98481.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
 </head>
 <body>
     <div class="container">
         <header>
             <div class="user-menu">
-                <img src="image/my_profile.jpg" alt="User Menu">
+                <img src="image/my_profile.jpg" alt="Sina Heidari's Profile Picture" loading="lazy">
                 <h2>Sina Heidari</h2>
             </div>
             <div class="buttons-topbar">
@@ -47,7 +65,7 @@
         </header>
         <aside class="sidebar left-sidebar">
             <div class="sidebar-header">
-                <div id="img-profile-div"><img src="image/my_profile.jpg" alt="Sina Heidari"></div>
+                <div id="img-profile-div"><img src="image/my_profile.jpg" alt="Sina Heidari's Profile Picture" loading="lazy"></div>
                 <h3>Sina Heidari</h3>
                 <div class="Profile-detailes">
                     <span id="Profile-detailes-text"></span>
@@ -98,9 +116,8 @@
             <div id="about" class="section">
                 <div class="about-profile">
                     <div class="container-img-profile">
-                        <img src="image/my_profile.jpg" alt="Your Photo">
+                        <img src="image/my_profile.jpg" alt="Sina Heidari's Profile Picture" loading="lazy">
                     </div>
-                    
                     <div class="about-description">
                         <h1>Hello! I'm Sina Heidari</h1>
                         <p>I'm an Electrical Engineering student with a passion for technology, programming, electronics, and space. Eager to learn and make an impact in these fields.</p>
@@ -114,7 +131,7 @@
                             <ul>
                                 <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>First Name :</span><span>Sina</span></li>
                                 <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>Last Name :</span><span>Heidari</span></li>
-                                <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>Age :</span><span>21 Years</span></li>
+                                <li><span class="container-icon"><i class="fa-solid fa-user"></i></span><span>Age :</span><span>22 Years</span></li>
                                 <li><span class="container-icon"><i class="fa-solid fa-flag"></i></span><span>Nationality :</span><span>Iranian</span></li>
                             </ul>
                         </div>
@@ -202,7 +219,6 @@
             </div>
     
             <div id="projects" class="section">
-
                 <div class="project-menu">
                     <ul>
                         <li class="nav-item" onclick="showProjectCategory('all')">All</li>
@@ -213,47 +229,39 @@
                     <div id="project-menu-indicator"></div>
                 </div>
                 <div id="project-cards">
-    
-                    <!-- MATLAB Project -->
-                    <!-- Python Project 1 -->
                     <div class="project-card all python">
-                        <div class="project-card-img"><img src="image/code.png" alt="Project Image"></div>
-                        <div class="project-card-title">Python Beginner Course Exercises by Jadi</div>
+                        <div class="project-card-img"><img src="image/code.png" alt="Python programming project exercises" loading="lazy">
+                        </div>
+                        <h3 class="project-card-title">Python Beginner Course Exercises by Jadi</h3>
                         <div class="project-card-btns">
-                            <a href="projects/basic-python.zip" class="download-btn"><i class="fa-solid fa-download"></i>Download</a>
+                            <a href="/projects/python-projects/basic-python.zip" class="download-btn"><i class="fa-solid fa-download"></i>Download</a>
                             <a class="view-btn" onclick="openModal('modal-python-2')"><i class="fa-solid fa-eye"></i></a>
                         </div>
                     </div>
                     <div id="modal-python-2" class="modal">
                         <div class="modal-content">
                             <div class="modal-content-header">
-                                <h2>Python Project</h2>
+                                <h3>Python Project</h3>
                                 <span class="container-icon close-modal" onclick="closeModal('modal-python-2')"><i class="fa-solid fa-xmark"></i></span>
                             </div>
-                            <h2>Python Beginner Course Exercises by Jadi on Maktabkhooneh</h2>
-                            <p>This file contains the solutions to the exercises from 6 chapters of the beginner Python course by Jadi MirMirani on Maktabkhooneh.</p>
-                            <ul>
-                                <li>Chapter 1 : Conditional Statements</li>
-                                <li>Chapter 2 : Loops and Functions</li>
-                                <li>Chapter 3 : Data Structures in Python</li>
-                                <li>Chapter 4 : Libraries in Python</li>
-                                <li>Chapter 5 : Working with Files in Python</li>
-                                <li>Chapter 6 : Final Project</li>
-                            </ul>
+                            <div class="modal-content-body">
+                                <h3>Python Beginner Course Exercises by Jadi on Maktabkhooneh</h3>
+                                <p>This file contains the solutions to the exercises from 6 chapters of the beginner Python course by Jadi MirMirani on Maktabkhooneh.</p>
+                                <ul>
+                                    <li>Chapter 1 : Conditional Statements</li>
+                                    <li>Chapter 2 : Loops and Functions</li>
+                                    <li>Chapter 3 : Data Structures in Python</li>
+                                    <li>Chapter 4 : Libraries in Python</li>
+                                    <li>Chapter 5 : Working with Files in Python</li>
+                                    <li>Chapter 6 : Final Project</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-            
-                    <!-- Python Project 2 -->
-                    <!-- Python Project 3 -->
-                    <!-- Python Project 4 -->
-    
-                    
-                    
+                    </div>              
                 </div>                
             </div>
     
             <div id="contact" class="section">
-                <h3>Contact Me</h3>
                 <div class="container">
                     <div class="social-networks">
                         <div class="circle-wrapper">
@@ -271,13 +279,10 @@
                     </div>
                     <div class="contact-box">
                         <h2>Contact Me</h2>
+                        <span></span>
                         <form action="" method="POST">
                             <div class="form-item">
-                                <span class="container-icon"><i class="fa-solid fa-user"></i></span>
                                 <input type="text" id="name" name="name" required placeholder="Enter Name">
-                            </div>
-                            <div class="form-item">
-                                <span class="container-icon"><i class="fa-solid fa-envelope"></i></span>
                                 <input type="email" id="email" name="email" required placeholder="Enter Email">
                             </div>
                             <input type="text" id="title-message" name="title" required placeholder="Title">
@@ -288,13 +293,34 @@
                 </div>
             </div>
         </main>
-        
-        <aside class="sidebar right-sidebar">
-            <div class="contact-box">
-            </div>
-        </aside>
     </div>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sina Heidari",
+            "jobTitle": "Electrical Engineer",
+            "url": "https://sinahdp.github.io",
+            "sameAs": [
+                "https://github.com/sinahdp",
+                "https://instagram.com/sina.heidaripour",
+                "https://t.me/sinahdp"
+            ],
+            "image": "https://sinahdp.github.io/image/my_profile.jpg",
+            "description": "Electrical Engineering student with a passion for technology and programming.",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "University of Ferdowsi Mashhad"
+            },
+            "skills": ["Python", "Matlab", "C++", "Electrical Engineering"],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Mashhad",
+                "addressCountry": "Iran"
+            }
+        }
+    </script>
     
-    <script src="js/js.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -133,12 +133,13 @@ body {
 }
 
 @media (max-width: 576px) {
-    .about-profile {
-        gap: 1.5em;
-
+    .section {
+        padding: 0.5rem;
     }
-    #about {
-        padding: 0;
+    
+    .about-profile {
+        gap: 1.5rem;
+
     }
     .about-description {
         max-width: 100%;
@@ -158,14 +159,11 @@ body {
     #project-cards {
         justify-content: center;
     }
+    .contact-box {
+        max-width: 100%;
+    }
     #contact .social-networks {
         padding: 1rem;
-    }
-    .contact-box h2 {
-        display: none;
-    }
-    #contact > h3 {
-        display: block;
     }
 }
 @media (min-width: 576px) and (max-width: 768px) {
@@ -259,3 +257,4 @@ h1:hover, h2:hover, h3:hover {
     }
 
 }
+

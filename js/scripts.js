@@ -158,7 +158,6 @@ function showProjectCategory(category) {
     }
 }
 
-
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
     var modalContent = modal.querySelector('.modal-content');
@@ -185,50 +184,4 @@ document.addEventListener("DOMContentLoaded", () => {
     handleMenuToggle();
     showProjectCategory('all');
     showSection('about');
-});
-
-gsap.from(".container-img-profile", {
-    duration: 1.5,
-    opacity: 0,
-    ease: "power3.out"
-});
-
-gsap.from(".about-description", {
-    duration: 1.5,
-    opacity: 0,
-    y: 30,
-    ease: "power3.out",
-    delay: 0.5
-});
-
-gsap.from(".personal-info", {
-    duration: 1.5,
-    opacity: 0,
-    y: 50,
-    ease: "power3.out",
-    delay: 1
-});
-
-gsap.from(".personal-info h2", {
-    duration: 1.5,
-    opacity: 0,
-    x: -50,
-    ease: "power3.out",
-    delay: 1
-});
-gsap.from(".skills h2", {
-    duration: 1.5,
-    opacity: 0,
-    x: -50,
-    ease: "power3.out",
-    delay: 2
-});
-
-gsap.from("#Programming-skills, #software-skills", {
-    duration: 1.5,
-    opacity: 0,
-    y: 30,
-    ease: "power3.out",
-    stagger: 0.3,
-    delay: 2.5
 });

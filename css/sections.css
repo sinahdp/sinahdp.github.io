@@ -4,6 +4,7 @@
     transition: opacity 0.5s, transform 0.5s;
     transform: scale(0.95);
     height: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
 }
 
 .section.active {

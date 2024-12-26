@@ -8,12 +8,12 @@ header {
     position: fixed;
     top:0.5rem;
     left: 18rem;
-    right: 18rem;
+    right: 0.5rem;
     padding: 0.5rem;
     height:3rem;
     box-sizing: border-box;
     border-radius: 0.75rem;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 header.expanded {
     left: 0.5rem;
