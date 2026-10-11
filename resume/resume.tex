@@ -1,0 +1,164 @@
+﻿% Compile with XeLaTeX or LuaLaTeX (needs Calibri + Consolas, installed with Windows/Office)
+\documentclass[a4paper,10pt]{article}
+
+%====================================================
+% Packages
+%====================================================
+\usepackage[left=0.7in,right=0.7in,top=0.55in,bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{array}
+
+%====================================================
+% Colors (print-safe versions of the site palette)
+%   site --accent  #4fd1c5  ->  teal
+%   site --accent2 #7aa2f7  ->  blue
+%   site --text    #dde4ee  ->  ink
+%   site --muted   #8a97aa  ->  slate
+%   site --line    #1c2431 / --line2 #273244 -> light rules
+%====================================================
+\definecolor{accent}{HTML}{0E9488}
+\definecolor{accentb}{HTML}{3D63C9}
+\definecolor{ink}{HTML}{111827}
+\definecolor{muted}{HTML}{5B6778}
+\definecolor{rule}{HTML}{D5DCE6}
+\definecolor{tagbg}{HTML}{ECF8F6}
+
+\setmainfont{Calibri}
+\setmonofont{Consolas}[Scale=MatchLowercase]
+\newfontfamily\descfont{Calibri}   % same family as headings
+\definecolor{body}{HTML}{2D3748}
+\defaultfontfeatures{Ligatures=TeX}
+\color{ink}
+\newcommand{\mono}[1]{{\ttfamily #1}}
+
+%====================================================
+% Hyperlinks
+%====================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdftitle={Mohammad Sina Heidaripour - Resume},
+    pdfauthor={Mohammad Sina Heidaripour}
+}
+
+%====================================================
+% Section style: mono eyebrow + hairline (like the site's .sub / .eyebrow)
+%====================================================
+\titleformat{\section}[block]
+{\ttfamily\footnotesize\bfseries\color{accent}}
+{}{0em}{\MakeUppercase}
+[{\vspace{2pt}\color{rule}\titlerule[0.6pt]\color{ink}}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=2pt, parsep=0pt}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+%====================================================
+% Components
+%====================================================
+% Pill tag, like .tags li
+\newcommand{\tag}[1]{%
+  \begingroup\setlength{\fboxsep}{1.6pt}\setlength{\fboxrule}{0.4pt}%
+  \fcolorbox{accent!45}{tagbg}{\mono{\fontsize{6.6pt}{7pt}\selectfont\color{accent}#1}}%
+  \endgroup\hspace{4pt}}
+
+% Numbered project card: \project{01}{Title}{Description}{tags}
+\newcommand{\project}[4]{%
+  \noindent\begin{minipage}[t]{1.0cm}\vspace{0pt}\mono{\small\color{accent}#1}\end{minipage}%
+  \begin{minipage}[t]{\dimexpr\linewidth-1.0cm\relax}\vspace{0pt}
+    {\bfseries #2}\par\vspace{1pt}
+    {\descfont\color{body}#3}\par\vspace{2.5pt}
+    #4
+  \end{minipage}\par\vspace{5pt}}
+
+% Skill row: mono uppercase label + values
+\newcommand{\skillrow}[2]{%
+  \noindent\begin{minipage}[t]{4.6cm}\vspace{0pt}\mono{\fontsize{7pt}{9pt}\selectfont\color{muted}\MakeUppercase{#1}}\end{minipage}%
+  \begin{minipage}[t]{\dimexpr\linewidth-4.6cm\relax}\vspace{0pt}#2\end{minipage}\par\vspace{2.5pt}}
+
+%====================================================
+\begin{document}
+
+%----------------------------------------------------
+% HEADER
+%----------------------------------------------------
+\noindent
+\begin{minipage}[c]{2.9cm}
+  \IfFileExists{my_profile.jpg}{%
+    \begin{tikzpicture}
+      \clip (0,0) circle (1.2cm);
+      \node at (0,0) {\includegraphics[width=2.4cm]{my_profile.jpg}};
+      \draw[accent,line width=1.1pt] (0,0) circle (1.2cm);
+    \end{tikzpicture}%
+  }{\fbox{Photo}}
+\end{minipage}%
+\hspace{0.3cm}%
+\begin{minipage}[c]{\dimexpr\linewidth-3.2cm\relax}
+  {\ttfamily\scriptsize\color{accent}\MakeUppercase{Electrical Engineering \textperiodcentered{} Control Systems}}\\[5pt]
+  {\fontsize{25}{27}\selectfont\bfseries Mohammad Sina \textcolor{accent}{Heidaripour}}\\[5pt]
+  {\ttfamily\small\color{accentb}Machine Learning \;\textbullet\; Reinforcement Learning \;\textbullet\; Intelligent Control}\\[7pt]
+  {\descfont\color{body}Undergraduate control engineer focused on dynamic modeling and learning-based control, benchmarking modern methods against classical controllers. Long-term goal: guidance, navigation and control of aerospace and space systems.}
+\end{minipage}
+
+\vspace{7pt}
+\noindent{\color{rule}\rule{\linewidth}{0.6pt}}\\[3pt]
+\noindent\begin{center}\small
+  \mbox{\color{accent}\faEnvelope~\href{mailto:sina.heidaripour@gmail.com}{sina.heidaripour@gmail.com}}\quad
+  \mbox{\color{accent}\faPhone~+98 902 526 3782}\quad
+  \mbox{\color{accent}\faGithub~\href{https://github.com/sinahdp}{github.com/sinahdp}}\quad
+  \mbox{\color{accent}\faLinkedin~\href{https://www.linkedin.com/in/sinahdp}{linkedin.com/in/sinahdp}}\quad
+  \mbox{\color{accent}\faTelegram~\href{https://t.me/sinahdp}{@sinahdp}}
+\end{center}
+\vspace{-6pt}
+\noindent{\color{rule}\rule{\linewidth}{0.6pt}}
+
+%----------------------------------------------------
+% EDUCATION
+%----------------------------------------------------
+\section*{Education}
+{\bfseries Bachelor's Degree in Electrical Engineering (Control Engineering)}
+\hfill \mono{\small\color{accent}2022 -- Present}\\
+{\color{accentb}Ferdowsi University of Mashhad, Iran}\\[1pt]
+{\descfont\color{body}Undergraduate program centred on control systems, dynamic modeling and artificial intelligence, applied through hands-on simulation and machine-learning projects.}
+
+%----------------------------------------------------
+% PROJECTS
+%----------------------------------------------------
+\section*{Projects}
+\project{01}{Reinforcement Learning--Based Control of an Inverted Pendulum}
+{Designed a mathematical model of an inverted pendulum in MATLAB/Simulink. Implemented and benchmarked a DQN-based reinforcement learning controller against a classical PID controller in Python to evaluate dynamic stabilization.}
+{\tag{MATLAB/Simulink}\tag{Python}\tag{DQN}\tag{PID}}
+
+\project{02}{Human Activity Recognition using Transformer Networks}
+{Implemented a custom Transformer architecture from scratch using raw PyTorch tensor operations, achieving robust sensor-based activity classification on the PAMAP2 dataset.}
+{\tag{PyTorch}\tag{Transformers}\tag{PAMAP2}}
+
+\project{03}{Classical Machine Learning Implementations}
+{Engineered and evaluated predictive models including linear/logistic regression, SVM and KNN using Scikit-Learn to solve fundamental classification and regression challenges.}
+{\tag{Scikit-Learn}\tag{SVM}\tag{KNN}\tag{Regression}}
+
+%----------------------------------------------------
+% TECHNICAL SKILLS
+%----------------------------------------------------
+\section*{Technical Skills}
+\skillrow{Programming languages}{Python \;\textperiodcentered\; C++}
+\skillrow{Simulation \& modeling}{MATLAB \;\textperiodcentered\; Simulink}
+\skillrow{Deep learning \& architectures}{PyTorch \;\textperiodcentered\; Transformers \;\textperiodcentered\; Sequence models}
+\skillrow{Scientific computing \& ML}{NumPy \;\textperiodcentered\; SciPy \;\textperiodcentered\; Matplotlib \;\textperiodcentered\; Scikit-Learn}
+\skillrow{Embedded systems}{STM32 microcontrollers}
+\skillrow{Software engineering}{Object-oriented programming \;\textperiodcentered\; Git \;\textperiodcentered\; GitHub}
+\skillrow{Operating systems}{Linux}
+\skillrow{Languages}{English (intermediate)}
+
+\end{document}
+
+
